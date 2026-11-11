@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>打给回忆 · 隐私政策</title>
+<meta name="description" content="打给回忆（Call Your Memory）隐私政策：无服务器、无账号，录音只留在你的设备与你的 iCloud。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<nav class="lang"><a href="en/" hreflang="en">English</a> · <a href="support.html">支持 / Support</a></nav>
+<h1>打给回忆 · 隐私政策</h1>
+<p class="meta">生效日期：2026-11-12　|　适用版本 1.0 及以后</p>
+<p><strong>生效日期</strong>：2026 年 11 月 12 日<br>
+<strong>适用版本</strong>：打给回忆 / Call Your Memory（iOS）1.0 及以后版本<br>
+<strong>开发者</strong>：李杰（Weijie Li）<br>
+<strong>联系方式</strong>：lwjtmj@outlook.com</p>
+<p>一句话说完：<strong>这款 App 没有服务器，也没有账号。你的录音只留在你的设备上，以及你自己的 iCloud 里。</strong></p>
+<hr>
+<h2>1. 谁在处理你的数据</h2>
+<p>本 App 由独立开发者发布与维护。我们不运营任何后端服务器，没有账号系统，不需要注册或登录，也没有把任何数据上传到我们自己的地方。</p>
+<h2>2. 我们不做什么</h2>
+<ul>
+<li>不收集姓名、邮箱、手机号、身份证件等身份信息（因为没有账号，也就没有可收集的字段）。</li>
+<li>不收集设备标识符用于追踪，不做跨 App、跨网站的广告追踪。</li>
+<li>不把使用行为、崩溃日志、诊断信息发送到我们的服务器。</li>
+<li>不接入任何广告 SDK、统计分析 SDK、社交登录 SDK。</li>
+<li>不出售、不出租、不交换任何数据——没有可卖的数据。</li>
+</ul>
+<h2>3. 麦克风</h2>
+<ul>
+<li><strong>用途</strong>：录下你留给某一天、或留给某个人的话。</li>
+<li><strong>何时使用</strong>：只有你按下录音键时，App 才请求麦克风权限并开始录音；不录音时不采集声音。</li>
+<li><strong>存放在哪</strong>：录音写入 App 在本机的私有存储目录；当你开启了 iCloud 同步（设备登录 iCloud 时），同一份录音也会写入你自己的 CloudKit 私有数据库。</li>
+<li><strong>我们怎么处理</strong>：不上传、不试听、不转写、不做语音分析、不用于训练。开发者无法访问你的 iCloud 私有库。</li>
+</ul>
+<h2>4. 通讯录（只读）</h2>
+<ul>
+<li><strong>用途</strong>：把电话号码对上人。这样你「拨给某个人」时，应答机会用他的名字接起，你留下的话也会自动归档到他名下。</li>
+<li><strong>读取什么</strong>：姓名、名、昵称、电话号码。不读取邮箱、地址、生日、备注、头像。</li>
+<li><strong>存放在哪</strong>：只存在本机 App 的私有存储里，用于本地匹配。</li>
+<li><strong>不会做什么</strong>：不写入、不修改、不删除你的通讯录；不上传。</li>
+<li><strong>可以拒绝</strong>：拒绝授权只影响「拨给某个人」这一功能，拨日期、录音、未来留言等其余功能照常可用。</li>
+</ul>
+<h2>5. 定位（可选，默认不请求）</h2>
+<ul>
+<li><strong>用途</strong>：只在你主动于设置里开启「城市称呼」之后，读取大致城市名，用于界面上的接线员/来电文案。</li>
+<li><strong>精度与时机</strong>：大致位置（约 3 公里精度），且仅在 App 使用期间请求。</li>
+<li><strong>不保存、不上传</strong>：坐标不会被写入磁盘，也不会离开设备；App 只取城市名，且请求超过约 2.5 秒即放弃。</li>
+<li><strong>拨号不触发定位</strong>：在假键盘上拨任何号码都不会请求定位。</li>
+<li><strong>可以随时关闭</strong>：iOS 设置 → 隐私与安全性 → 定位服务 → 打给回忆。</li>
+</ul>
+<h2>6. 通知</h2>
+<ul>
+<li><strong>用途</strong>：你预约的「未来来电」到点时提醒你回来收听。</li>
+<li><strong>何时请求</strong>：只在你创建未来留言时请求通知权限。</li>
+<li><strong>内容</strong>：通知由系统在本地生成并投递，不经过任何服务器；标题固定，正文只包含你为那条留言起的标题。</li>
+<li><strong>可以关闭</strong>：iOS 设置 → 通知 → 打给回忆。</li>
+</ul>
+<h2>7. iCloud（CloudKit 私有库）</h2>
+<ul>
+<li><strong>数据去向</strong>：你的录音，以及与之相关的元数据（标题、备注、录音日期、创建时间），会写入 <code>iCloud.com.jayli.callmemory</code> 这个 CloudKit <strong>私有数据库</strong>。</li>
+<li><strong>谁能看见</strong>：只有你自己的 Apple ID 能读写。「私有数据库」在 Apple 的设计里对开发者不可读，我们无法查看、导出或使用其中的内容。</li>
+<li><strong>未登录 iCloud 时</strong>：不同步，录音只保存在本机。</li>
+<li><strong>托管方</strong>：iCloud 由 Apple 提供并托管，同时受 Apple 隐私政策约束：<a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></li>
+</ul>
+<h2>8. 内购与会员</h2>
+<ul>
+<li>购买通过 Apple 的 App 内购买（StoreKit）完成。价格、支付方式、账单与退款全部由 Apple 处理。</li>
+<li><strong>我们拿不到支付信息</strong>：看不到你的姓名、卡号、账单地址，也不知道你用什么方式付款。App 只知道一件事——当前这台设备上的 Apple ID 是否具备会员权益。</li>
+<li>免费通话次数与本月用量只记录在本机的系统钥匙串（Keychain）里，不联网、不上传，删除 App 后随之消失。</li>
+</ul>
+<h2>9. 数据保留、删除与导出</h2>
+<ul>
+<li><strong>本机</strong>：在 App 内删除某条录音，或在系统里删除 App，对应的录音与设置即被删除。</li>
+<li><strong>iCloud</strong>：删除 App 不会自动清掉 iCloud 里的副本。你可以在 iOS 设置 → 你的名字 → iCloud → 管理账户存储 中删除本 App 的数据；也可以在 App 内删除录音后让它同步删除。</li>
+<li><strong>导出</strong>：你可以主动把全部录音打包导出到系统「文件」（可存到 iCloud Drive 或其他位置）。导出之后，文件由你保管，不再受本政策约束。</li>
+<li><strong>没有「向开发者申请删除」的流程</strong>：我们没有服务器，本来就没有存放你的数据的地方。</li>
+</ul>
+<h2>10. 第三方</h2>
+<ul>
+<li><strong>没有任何第三方数据 SDK</strong>：无广告、无统计分析、无崩溃收集、无社交登录。</li>
+<li>只使用 Apple 提供的系统框架：CloudKit（iCloud 同步）、StoreKit（内购）、AVFoundation 与系统语音合成（录音与语音播放）、CoreLocation（可选的城市名）、Contacts（只读通讯录）、UserNotifications（本地通知）。</li>
+<li>随 App 分发的部分音效来自 ZapSplat（标准许可）与 CC0 素材，已在 App 内「设置 → 来源与说明」页署名。它们是打包进 App 的音频文件，不涉及任何数据处理。</li>
+</ul>
+<h2>11. 儿童</h2>
+<p>本 App 不面向 13 岁以下儿童设计，也不会有意收集儿童的个人信息。由于本 App 不收集上传数据、没有账号、没有社交功能，儿童使用时产生的内容同样只留在设备与用户自己的 iCloud 中。</p>
+<h2>12. 政策变更</h2>
+<p>如果未来的版本新增了需要联网或收集数据的功能，我们会在更新前修改本政策，并在 App 内或商店页面提示。涉及数据收集方式的重大变更，会重新征求你的同意。</p>
+<h2>13. 联系我们</h2>
+<p>对本政策有任何疑问，或想了解与你数据有关的事，请写信到：</p>
+<p><strong>lwjtmj@outlook.com</strong></p>
+<p>我们通常在 7 个工作日内回复。</p>
+<hr>
+<footer>
+<p>打给回忆 / Call Your Memory · 开发者：李杰（Weijie Li）<br>
+联系：<a href="mailto:lwjtmj@outlook.com">lwjtmj@outlook.com</a></p>
+<p><a href="en/">English Privacy Policy</a> · <a href="support.html">技术支持 / Support</a></p>
+</footer>
+</main>
+</body>
+</html>
