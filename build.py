@@ -393,6 +393,16 @@ def strip_internal_refs(text):
     return re.sub(r"[ \t]{2,}", " ", text)
 
 
+APPLE_URL_RE = re.compile(
+    r'<a href="(https://www\.apple\.com/legal/privacy/)">[^<]*</a>'
+)
+
+
+def deanchor_third_party(html_text):
+    """要求：页面 0 条第三方外链。第三方 URL 保留为纯文本引用，不做可点击外链。"""
+    return APPLE_URL_RE.sub(r"\1", html_text)
+
+
 def main():
     zh = strip_internal(open(os.path.join(SRC, "privacy-policy-zh.md"), encoding="utf-8").read())
     en = strip_internal(open(os.path.join(SRC, "privacy-policy-en.md"), encoding="utf-8").read())
@@ -404,6 +414,8 @@ def main():
 
     zh_html = PAGE_ZH.format(eff_zh=EFFECTIVE_ZH, body=md_to_html(zh))
     en_html = PAGE_EN.format(eff_en=EFFECTIVE_EN, body=md_to_html(en))
+    zh_html = deanchor_third_party(zh_html)
+    en_html = deanchor_third_party(en_html)
 
     # 生效日期紧跟标题，作为页面顶部标识
     zh_html = zh_html.replace(
