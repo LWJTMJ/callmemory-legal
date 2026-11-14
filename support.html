@@ -32,7 +32,7 @@
 <p>只存在两个地方，都由你自己掌握：</p>
 <ul>
 <li><strong>本机</strong>：App 的私有存储目录，其他 App 读不到。</li>
-<li><strong>你自己的 iCloud</strong>：如果设备登录了 iCloud，录音会同时写入 <code>iCloud.com.jayli.callmemory</code> 这个 CloudKit <strong>私有数据库</strong>。只有你的 Apple ID 能读写，开发者看不到里面的内容。</li>
+<li><strong>你自己的 iCloud</strong>：设备登录 iCloud 且你开启 iCloud 同步后，录音才会写入 <code>iCloud.com.jayli.callmemory</code> 这个 CloudKit <strong>私有数据库</strong>。只有你的 Apple ID 能读写，开发者看不到里面的内容。</li>
 </ul>
 <p>本 App 没有服务器、没有账号，录音不会上传到开发者这一侧。</p>
 
@@ -56,7 +56,7 @@
 <ul>
 <li><strong>麦克风</strong>：录音必需，只在你按下录音键时使用。</li>
 <li><strong>通讯录</strong>：<strong>只读</strong>，仅用于把电话号码对上姓名/昵称，方便「拨给某个人」。拒绝授权只影响这一个功能，其他功能照常可用。App 不会修改你的通讯录。</li>
-<li><strong>定位</strong>：<strong>默认不请求</strong>，只有你在设置里主动开启「城市称呼」后才会读取大致城市名，坐标不写入磁盘、不上传。</li>
+<li><strong>定位</strong>：<strong>默认不请求</strong>，只有你在设置里主动开启「城市称呼」后，App 才会通过 Apple 的地理编码服务查城市名。该服务可能使用网络，App 不保存坐标。</li>
 <li><strong>通知</strong>：只用于「未来来电」到点提醒，由系统在本地生成，不经过任何服务器。</li>
 </ul>
 

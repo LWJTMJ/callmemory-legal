@@ -32,8 +32,8 @@
 <ul>
 <li><strong>Why:</strong> to record what you leave for a day, or for a person.</li>
 <li><strong>When:</strong> the microphone is requested and used only after you press the record key. Nothing is captured while you are not recording.</li>
-<li><strong>Where it goes:</strong> recordings are written to the app's private storage on your device. If iCloud sync is available (your device is signed in to iCloud), the same recording is also written to your own private CloudKit database.</li>
-<li><strong>What we do with it:</strong> nothing. We do not upload, listen to, transcribe or analyse recordings, and we do not use them for model training. The developer cannot access your private iCloud database.</li>
+<li><strong>Where it goes:</strong> recordings are written to the app's private storage on your device. If you turn on iCloud sync and your device is signed in to iCloud, the same recording is also written to your own private CloudKit database.</li>
+<li><strong>What we do with it:</strong> The developer does not receive, listen to, transcribe or use your recordings for model training. If you choose to generate speech with an authorized voice, audio processing takes place on your device. The developer cannot access your private iCloud database.</li>
 </ul>
 <h2>4. Contacts (read-only)</h2>
 <ul>
@@ -47,7 +47,7 @@
 <ul>
 <li><strong>Why:</strong> only if you switch on the optional "city name" setting, the app reads your approximate city to word on-screen operator and incoming-call copy.</li>
 <li><strong>Accuracy and timing:</strong> approximate (about 3 km), and only while you are using the app.</li>
-<li><strong>Not stored, not uploaded:</strong> coordinates are never written to disk and never leave the device. The app keeps only the city name, and gives up if the request takes longer than about 2.5 seconds.</li>
+<li><strong>City lookup:</strong> the app does not store coordinates. Apple’s geocoding service may use the network to look up the city name when you enable this option. The app uses only the resulting city name.</li>
 <li><strong>Dialling never triggers location:</strong> typing any number on the in-app keypad does not request location.</li>
 <li><strong>You can turn it off:</strong> iOS Settings → Privacy &amp; Security → Location Services → Call Your Memory.</li>
 </ul>
